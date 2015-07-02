@@ -17,6 +17,7 @@
 		B6694DCE1B445F6D005C02EA /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B6694DCD1B445F6D005C02EA /* Movie.m */; };
 		B6694DD11B446136005C02EA /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6694DD01B446136005C02EA /* MovieViewCell.m */; };
 		B6694DD41B449B5C005C02EA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6694DD31B449B5C005C02EA /* DetailViewController.m */; };
+		B6694DD71B4594F6005C02EA /* detailMovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6694DD61B4594F6005C02EA /* detailMovieViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		B6694DD01B446136005C02EA /* MovieViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewCell.m; sourceTree = "<group>"; };
 		B6694DD21B449B5C005C02EA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B6694DD31B449B5C005C02EA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B6694DD51B4594F6005C02EA /* detailMovieViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailMovieViewCell.h; sourceTree = "<group>"; };
+		B6694DD61B4594F6005C02EA /* detailMovieViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailMovieViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +75,7 @@
 		B6694D9A1B444D46005C02EA = {
 			isa = PBXGroup;
 			children = (
-				B6694DA51B444D46005C02EA /* MovieViewController */,
+				B6694DA51B444D46005C02EA /* Rotten Mangoes */,
 				B6694DBF1B444D47005C02EA /* MovieViewControllerTests */,
 				B6694DA41B444D46005C02EA /* Products */,
 			);
@@ -87,24 +90,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B6694DA51B444D46005C02EA /* MovieViewController */ = {
+		B6694DA51B444D46005C02EA /* Rotten Mangoes */ = {
 			isa = PBXGroup;
 			children = (
 				B6694DAA1B444D46005C02EA /* AppDelegate.h */,
 				B6694DAB1B444D46005C02EA /* AppDelegate.m */,
 				B6694DAD1B444D46005C02EA /* ViewController.h */,
 				B6694DAE1B444D46005C02EA /* ViewController.m */,
-				B6694DCC1B445F6D005C02EA /* Movie.h */,
 				B6694DD21B449B5C005C02EA /* DetailViewController.h */,
 				B6694DD31B449B5C005C02EA /* DetailViewController.m */,
+				B6694DCC1B445F6D005C02EA /* Movie.h */,
 				B6694DCD1B445F6D005C02EA /* Movie.m */,
 				B6694DB01B444D46005C02EA /* Main.storyboard */,
+				B6694DD51B4594F6005C02EA /* detailMovieViewCell.h */,
+				B6694DD61B4594F6005C02EA /* detailMovieViewCell.m */,
 				B6694DCF1B446136005C02EA /* MovieViewCell.h */,
 				B6694DD01B446136005C02EA /* MovieViewCell.m */,
 				B6694DB31B444D46005C02EA /* Images.xcassets */,
 				B6694DB51B444D46005C02EA /* LaunchScreen.xib */,
 				B6694DA61B444D46005C02EA /* Supporting Files */,
 			);
+			name = "Rotten Mangoes";
 			path = MovieViewController;
 			sourceTree = "<group>";
 		};
@@ -240,6 +246,7 @@
 				B6694DCE1B445F6D005C02EA /* Movie.m in Sources */,
 				B6694DA91B444D46005C02EA /* main.m in Sources */,
 				B6694DD41B449B5C005C02EA /* DetailViewController.m in Sources */,
+				B6694DD71B4594F6005C02EA /* detailMovieViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +441,7 @@
 				B6694DC81B444D47005C02EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6694DC91B444D47005C02EA /* Build configuration list for PBXNativeTarget "MovieViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +450,7 @@
 				B6694DCB1B444D47005C02EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

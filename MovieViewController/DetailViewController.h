@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
+#import "detailMovieViewCell.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UICollectionViewController
+
+@property(nonatomic,strong) Movie *movie;
+
+//
+//-(void)setMovie:(Movie *)movie;
+//-(Movie *)movie;
+////
+//
+//Movie *movie = [self movie];
+//Movie *movie2 = self.movie;
+
 
 @end

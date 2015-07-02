@@ -18,4 +18,8 @@
 
 @property(nonatomic,strong) UIImage *thumbnail;
 
+//@property(nonatomic,strong) NSURL *movieUrl;
+
+@property(nonatomic,strong) NSString *synopsis;
+
 @end

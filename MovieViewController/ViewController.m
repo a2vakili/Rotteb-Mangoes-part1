@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Movie.h"
 #import "MovieViewCell.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,7 @@
     
     //NSString *urlString= @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=kts883tcrfnpqrxgzqzjmmfk"; // my api key
     
-    NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=sr9tdu3checdyayjz85mff8j"; // older api key
+    NSString *urlString = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=sr9tdu3checdyayjz85mff8j&page_limit=50"; // older api key
     
     NSURL *url= [NSURL URLWithString:urlString];
     
@@ -56,6 +57,18 @@
                 Movie *newMovie= [[Movie alloc]init];
                 newMovie.title= movieDict[@"title"];
                 
+                newMovie.synopsis=movieDict[@"synopsis"];
+                
+                
+                
+                
+                NSString *tempString= movieDict[@"links"][@"reviews"];
+                NSString *appendstring= [tempString stringByAppendingString:@"?apikey=sr9tdu3checdyayjz85mff8j&page_limit=3"];
+                                                         
+                
+                
+                newMovie.review= appendstring;
+                
                 NSURL *thumnailURL= [NSURL URLWithString:movieDict[@"posters"][@"thumbnail"]];
                 
                 NSData *dataOfImage= [NSData dataWithContentsOfURL:thumnailURL];
@@ -79,6 +92,17 @@
     
     [task resume];
                                  
+}
+
+#pragma mark Segue
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"showDetails"]) {
+        NSIndexPath *indexPath= [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+        Movie *movie= self.movies[indexPath.item];
+        
+        [[segue destinationViewController] setMovie:movie];
+    }
 }
                                  
     
@@ -107,6 +131,7 @@
   
     
     cell.movieImageView.image= movie.thumbnail;
+    cell.movieNameLabel.text= movie.title;
     
     return cell;
     
